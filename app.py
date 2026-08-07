@@ -52,7 +52,7 @@ HOST = os.getenv("RAG_HOST", "127.0.0.1")
 #  os.getenv("想获得的环境变量的名字","控制台中没有该环境变量时，设置的默认值")
 
 
-PORT = int(os.getenv("RAG_POST", "7000"))
+PORT = int(os.getenv("RAG_POST", "8000"))
 #这里又包含了另三个知识：
 #   1.IP地址是一个字符串
 #   2.端口号是一个int数据
@@ -255,15 +255,22 @@ class LocalIndex:
         #最终返回的数组
         pieces:list[str] = []
         #将原字符串加工成一个数组
-        paragraphs = [temp.strip() for temp in re.split(text) if temp.strip]#知识点一
-        a_container_used_for_save_classified_str = " "
+        paragraphs = [temp.strip() for temp in re.split(r"\n{2,}", text) if temp.strip()]#知识点一
+        a_container_used_for_save_classified_str = ""
         for paragraph in paragraphs:
-            if paragraph + a_container_used_for_save_classified_str + 2 <= 1500:
+            if len(paragraph) > 1500:
+                if a_container_used_for_save_classified_str:
+                    pieces.append(a_container_used_for_save_classified_str)
+                    a_container_used_for_save_classified_str = ""
+                pieces.extend(paragraph[index:index + 1500] for index in range(0, len(paragraph), 1500))
+            elif len(paragraph) + len(a_container_used_for_save_classified_str) + (2 if a_container_used_for_save_classified_str else 0) <= 1500:
                 a_container_used_for_save_classified_str = f"{a_container_used_for_save_classified_str}\n\n{paragraph}"#知识点四
             else:
                 if a_container_used_for_save_classified_str:
                     pieces.append(a_container_used_for_save_classified_str)#知识点二
-                current = paragraph
+                a_container_used_for_save_classified_str = paragraph
+        if a_container_used_for_save_classified_str:
+            pieces.append(a_container_used_for_save_classified_str)
         return pieces or [text[:1500]]#知识点三
     #知识点一：设立数组时的快速方式
     #        [a.strip() for a in b if a.strip()]
@@ -305,7 +312,7 @@ class LocalIndex:
             with pdfplumber.open(each_pdf_path) as pdf_content:#知识点二：python的打开pdf的函数    知识点三：python的with功能
                 total_pages = len(pdf_content.pages)#每个pdf的属性，之后需要存到document_data这个数组中
                 for page_number, each_page in enumerate(pdf_content.pages,start = 1):#知识点四：pdf数据的内置变量page #知识点五： enumerate函数
-                    cleaned_content = clean_informantion(each_page.extract_text())#知识点六： page变量的extract_text()函数
+                    cleaned_content = clean_informantion(each_page.extract_text() or "")#知识点六： page变量的extract_text()函数
                     if cleaned_content:
                         for each_piece in self.split_page(cleaned_content):
                             chunks.append(Chunk(
@@ -389,7 +396,7 @@ class LocalIndex:
         scored.sort(key=lambda item: item[0], reverse=True)#知识点四
         return[#这串代码需要着重解释一下
             {"rank": index, "score": round(score, 4), **asdict(chunk)}
-            for index, (score, chunk) in enumerate(scored[:limit], start=1)
+            for index, (score, chunk) in enumerate(scored[:5], start=1)
         ]
     #知识点一: tuple数组数据类型，类似c++中的固定数组，大小不可以改变，不可以使用append
     #知识点二: zip函数
@@ -419,7 +426,7 @@ class LocalIndex:
 INDEX = LocalIndex(Data_location)
 
 def generate_prompt(question: str, information: list[dict[str, Any]]) -> str:
-    content = "\n\n".join(f"[资料{index}]  文件: {each.get('source')} 页码: {each.get('page')} \n内容: {each.get('text')} " for each, index in enumerate(information, start = 1))#知识点一
+    content = "\n\n".join(f"[资料{index}]  文件: {each.get('source')} 页码: {each.get('page')} \n内容: {each.get('text')} " for index, each in enumerate(information, start = 1))#知识点一
     content = content[:5000].rsplit("\n", 1)[0]
     return f"""
     你是一个智能客服，你的名字叫做南宫羽。请使用下方资料回答用户问题。
@@ -454,7 +461,7 @@ def generate_prompt(question: str, information: list[dict[str, Any]]) -> str:
 
 def call_openai(prompt:str, information:list[dict[str, Any]])->tuple[str | None, str | None]:
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    address = os.getenv("OPENAI_API_URL", "").rstrip("/") + "/chat/completions"
+    address = os.getenv("OPENAI_BASE_URL", "").rstrip("/") + "/chat/completions"
     if not api_key:
         return None, "QAQ老大，泥还没给窝装脑子呢喵-^—。"
     if not address:
@@ -469,7 +476,7 @@ def call_openai(prompt:str, information:list[dict[str, Any]])->tuple[str | None,
     }
     request = urllib.request.Request(address, data=json.dumps(payload).encode("utf-8"), headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}, method="POST")
     try:
-        with urllib.request.urlopen(request, timeout=45) as response:
+        with urllib.request.urlopen(request, timeout=120) as response:
             body = json.loads(response.read().decode("utf-8"))
         return body["choices"][0]["message"]["content"].strip(), None
     except urllib.error.HTTPError as exc:
@@ -479,9 +486,9 @@ def call_openai(prompt:str, information:list[dict[str, Any]])->tuple[str | None,
         return None, f"无法连接模型服务：{exc.reason}。请检查网络或 OPENAI_BASE_URL。"
     except (KeyError, IndexError, json.JSONDecodeError) as exc:
         return None, f"模型返回格式异常：{exc}。"
-    except TimeoutError:
+    except (TimeoutError, urllib.error.IncompleteRead) as exc:
         return None, "模型请求超时，请稍后重试。"
-
+#try except语法
 
 
 def answer_question_collection(question: str):
@@ -490,7 +497,79 @@ def answer_question_collection(question: str):
     if not answer[0]:
         return answer[1]
     return answer[0]
-class Handler(BaseHTTPRequestHandler):#这个是python中继承父类的方法，BaseHTTPRequestHandler是python自带的处理网页的请求的类，可以帮助处理一些底层细节
+
+
+# Self-contained frontend. Replace assets/avatar-thinking.gif with an animation
+# generated from the supplied reference images when it is ready.
+HTML = r'''<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>智能客服</title>
+<style>
+body{font-family:Arial,"Microsoft YaHei",sans-serif;max-width:700px;margin:40px auto;padding:0 16px;color:#333;transition:.2s}
+.version-bar{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:12px;font-size:13px;color:#777}
+.version-bar select{padding:6px 10px;border:1px solid #ccc;border-radius:6px;background:#fff}
+.version-basic{background:#fff0f6;color:#402c42;max-width:820px}
+.version-basic #messages{border-color:#f4bfd2;border-radius:12px;background:#fff8fb}
+.version-basic button{background:#ff8fb3;color:#fff;border:0;border-radius:8px}
+.version-full{max-width:none;margin:0;padding:0;background:linear-gradient(135deg,#fff8fb,#ffeef5);color:#402c42}
+.version-full .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.version-full .sidebar{display:block;padding:28px 20px;background:#ffffff99;border-right:1px solid #f5dce7}
+.version-full .brand{display:flex;gap:10px;align-items:center;font-weight:bold;margin-bottom:28px}.version-full .brand-mark{background:#ff8fb3;color:#fff;border-radius:12px;padding:10px}.version-full .nav{padding:11px;border-radius:10px;margin:6px 0}.version-full .nav.active{background:#fff;color:#ff709f}.version-full .small{font-size:12px;color:#9c7f8d;margin:22px 0 8px}
+.version-full .main{padding:26px 42px;max-width:900px;width:100%;margin:auto}.version-full .top{display:flex;justify-content:space-between;align-items:flex-start}.version-full h1{font-size:26px;margin:0}.version-full .subtitle{color:#98778a}.version-full .status{background:#fff;border:1px solid #f5dce7;border-radius:20px;padding:8px 12px;color:#668276}.version-full .welcome{display:flex;gap:14px;margin:28px 0}.version-full .avatar{width:64px;height:64px;object-fit:cover;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 10px #d68ba555}.version-full .welcome-text{background:#fff;border:1px solid #f5dce7;border-radius:6px 18px 18px 18px;padding:14px;line-height:1.6}.version-full .meta{font-size:12px;color:#b89baa;margin-top:5px}
+.version-full #messages{height:320px;border-color:#f5dce7;border-radius:16px;background:#fff}.version-full .quick{display:flex;gap:8px;margin:10px 0}.version-full .quick button,.version-full button{background:#ff709f;color:#fff;border:0;border-radius:12px}.version-full form{background:#fff;border:1px solid #f5dce7;padding:8px;border-radius:14px}.version-full textarea{border:0;outline:0}.version-full .simple-view{display:none}
+#messages{height:420px;border:1px solid #ddd;padding:12px;overflow:auto;margin:20px 0}
+.message{margin:10px 0;padding:8px 10px;border-radius:6px;white-space:pre-wrap}
+.user{background:#eaf3ff;text-align:right}
+.bot{background:#f5f5f5}
+form{display:flex;gap:8px}
+textarea{flex:1;padding:10px;resize:vertical}
+button{padding:10px 18px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar"><div class="brand"><span class="brand-mark">羽</span><span>南宫羽 · 客服</span></div><div class="nav active">♡ 智能问答</div><div class="nav">✦ 知识库</div><div class="nav">◷ 对话记录</div><div class="small">热门提问</div><div class="nav">软件工程的核心概念</div><div class="nav">黑盒测试和白盒测试</div></aside>
+<main class="main"><div class="version-bar">页面版本：<select id="version"><option value="simple">极简版</option><option value="basic">粉色基础版</option><option value="full">粉色完整客服版</option></select></div><div class="top"><div><h1>你好呀，我是南宫羽</h1><div class="subtitle">把问题交给我，我们一起把知识变得软乎乎 ✨</div></div><div class="status">● 在线 · 已连接知识库</div></div><div class="welcome"><img class="avatar" src="/assets/avatar-reference.png" alt="南宫羽头像"><div><div class="welcome-text">嗨，老大～ 有什么想了解的内容吗？我会根据知识库认真查找，再给你清晰的答案喵 ฅ^•ﻌ•^ฅ</div><div class="meta">南宫羽 · 刚刚</div></div></div><div class="quick"><button type="button" data-question="什么是敏捷开发？">什么是敏捷开发？</button><button type="button" data-question="解释一下软件测试">解释一下软件测试</button><button type="button" data-question="给我一个复习建议">给我一个复习建议</button></div><div id="messages"></div><form id="form"><textarea id="input" rows="2" placeholder="请输入问题"></textarea><button type="submit">发送</button></form></main>
+</div>
+<script>
+const form=document.getElementById('form');
+const input=document.getElementById('input');
+const messages=document.getElementById('messages');
+const version=document.getElementById('version');
+document.querySelectorAll('[data-question]').forEach(function(button){button.addEventListener('click',function(){input.value=button.dataset.question;input.focus()})});
+const savedVersion=localStorage.getItem('chat-version')||'simple';
+version.value=savedVersion;
+document.body.className=savedVersion==='simple'?'':('version-'+savedVersion);
+version.addEventListener('change',function(){localStorage.setItem('chat-version',version.value);document.body.className=version.value==='simple'?'':('version-'+version.value)});
+function addMessage(text,className){
+  const div=document.createElement('div');
+  div.className='message '+className;
+  div.textContent=text;
+  messages.appendChild(div);
+  messages.scrollTop=messages.scrollHeight;
+}
+form.addEventListener('submit',async function(event){
+  event.preventDefault();
+  const question=input.value.trim();
+  if(!question)return;
+  addMessage(question,'user');
+  input.value='';
+  try{
+    const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:question})});
+    const data=await response.json();
+    addMessage(data.answer||data.error||'没有收到回答','bot');
+  }catch(error){
+    addMessage('请求失败，请检查后端是否启动','bot');
+  }
+});
+</script>
+</body>
+</html>'''
+
+
+class Handler(BaseHTTPRequestHandler):#这个是python中继承父类的方法，BaseHTTPRequestHandler是python自带的处理网页的请求的类，可以帮助处理一些网页的请求
     def _send(self, status: int, payload: Any, content_type: str = "application/json; charset=utf-8") -> None:
         body = payload if isinstance(payload, bytes) else (payload.encode("utf-8") if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False).encode("utf-8"))
         #上面这条的的理解顺序要从后往前看
@@ -526,7 +605,7 @@ class Handler(BaseHTTPRequestHandler):#这个是python中继承父类的方法�
             if asset_path.parent != assets_root or not asset_path.is_file():#is_file()函数是用来确认该路径是否的确指向了一个真实的文件
                 self._send(HTTPStatus.NOT_FOUND, {"error": "Asset not found"})
                 return
-            mime = "image/png" if asset_path.suffix.lower() == ".png" else "application/octet-stream"
+            mime = "image/png" if asset_path.suffix.lower() == ".png" else "video/mp4" if asset_path.suffix.lower() == ".mp4" else "application/octet-stream"
             self._send(HTTPStatus.OK, asset_path.read_bytes(), mime)
         elif self.path == "/api/health":
             self._send(HTTPStatus.OK, {
@@ -549,11 +628,11 @@ class Handler(BaseHTTPRequestHandler):#这个是python中继承父类的方法�
         try:
             length = int(self.headers.get("Content-Length", "0"))
             body = json.loads(self.rfile.read(length).decode("utf-8"))
-            question = str(body.get("message", "")).strip()
+            question = str(body.get("message") or body.get("question") or "").strip()
             if not question:
                 raise ValueError("message is required")
-            result = answer_question_collection(question, int(body.get("top_k", 5)))
-            self._send(HTTPStatus.OK, result)
+            result = answer_question_collection(question)
+            self._send(HTTPStatus.OK, {"answer": result})
         except (ValueError, json.JSONDecodeError):
             self._send(HTTPStatus.BAD_REQUEST, {"error": "请输入有效的问题。"})
         except Exception as exc:  # keep the API response readable for local debugging
@@ -564,19 +643,14 @@ class Handler(BaseHTTPRequestHandler):#这个是python中继承父类的方法�
 
 
 def main() -> None:
-    print(f"Loading PDFs from {Data_location} ...")
     INDEX.extract_and_process()
-    print(f"Indexed {len(INDEX.document_data)} documents into {len(INDEX.chunks)} chunks.")
     server = ThreadingHTTPServer((HOST, PORT), Handler)
-    print(f"RAG customer service is running at http://{HOST}:{PORT}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nStopping...")
+        print("end")
     finally:
         server.server_close()
-
-
 if __name__ == "__main__":
     main()
 
