@@ -1,17 +1,4 @@
-"""批量自动评测示范。
 
-这个文件演示完整流程：
-1. 读取知识库评测数据集；
-2. 对每个问题调用 retrieve(question, top_k)；
-3. 保存 retrieval_results.json；
-4. 自动计算 Recall@K 并保存 recall_report.json。
-
-运行演示模式（用标准答案模拟检索结果，仅用于验证流程）：
-  python 自动评测示范.py --demo --limit 10 --k 5
-
-接入真实 RAG 时，请把 retrieve() 函数替换成自己的向量检索代码，然后运行：
-  python 自动评测示范.py --limit 122 --k 5
-"""
 import argparse
 import json
 import sys
