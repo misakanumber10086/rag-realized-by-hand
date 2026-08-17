@@ -1,0 +1,1875 @@
+[
+  {
+    "question": "什么是软件工程？",
+    "expected_chunks": [
+      29
+    ],
+    "category": "基础概念",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "question": "软件除了程序本身还包括哪些内容？",
+    "expected_chunks": [
+      29
+    ],
+    "category": "基础概念",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "question": "什么是好的软件？应具备哪些质量属性？",
+    "expected_chunks": [
+      28
+    ],
+    "category": "质量属性",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "question": "软件产品分为哪些主要类型？",
+    "expected_chunks": [
+      30,
+      31
+    ],
+    "category": "基础概念",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 31
+      },
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "通用软件产品和定制软件产品有什么区别？",
+    "expected_chunks": [
+      30,
+      31
+    ],
+    "category": "基础概念",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 31
+      },
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "软件过程包含哪些基本活动？",
+    "expected_chunks": [
+      34
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "question": "软件规格说明、开发、验证和演化分别做什么？",
+    "expected_chunks": [
+      34
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "question": "软件开发生命周期通常有哪些步骤？",
+    "expected_chunks": [
+      12
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "question": "为什么软件上线后仍然需要持续维护？",
+    "expected_chunks": [
+      46,
+      49
+    ],
+    "category": "维护演化",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 48
+      },
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "question": "软件演化的变更请求通常来自哪里？",
+    "expected_chunks": [
+      49
+    ],
+    "category": "维护演化",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "question": "什么情况下需要紧急修改系统？",
+    "expected_chunks": [
+      51,
+      52
+    ],
+    "category": "维护演化",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 54
+      },
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 55
+      }
+    ]
+  },
+  {
+    "question": "为什么软件工程方法比个人式编程更重要？",
+    "expected_chunks": [
+      32
+    ],
+    "category": "基础概念",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "question": "软件工程中如何处理系统异构性、安全和规模问题？",
+    "expected_chunks": [
+      35,
+      36
+    ],
+    "category": "工程实践",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 37
+      },
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "question": "什么是软件复用？为什么 Web 系统常采用复用？",
+    "expected_chunks": [
+      44
+    ],
+    "category": "工程实践",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "question": "云计算软件服务有什么特点？",
+    "expected_chunks": [
+      42
+    ],
+    "category": "基础概念",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "question": "独立应用、交互式事务系统和嵌入式系统有何区别？",
+    "expected_chunks": [
+      38
+    ],
+    "category": "基础概念",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "question": "数据采集系统的典型工作方式是什么？",
+    "expected_chunks": [
+      40
+    ],
+    "category": "基础概念",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 1 INTRODUCTION-26-04.pdf",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "question": "什么是计划驱动过程和敏捷过程？",
+    "expected_chunks": [
+      60
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "question": "软件过程模型是什么？",
+    "expected_chunks": [
+      61
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "question": "瀑布模型的核心思想是什么？",
+    "expected_chunks": [
+      62
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "question": "瀑布模型包含哪些阶段？",
+    "expected_chunks": [
+      64,
+      65
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 13
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "question": "瀑布模型为什么难以适应需求变化？",
+    "expected_chunks": [
+      66
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "question": "什么是增量模型？",
+    "expected_chunks": [
+      67,
+      69
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 16
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "question": "增量开发如何实现早期交付？",
+    "expected_chunks": [
+      67,
+      70
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 16
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "question": "增量开发相比瀑布模型有哪些优势？",
+    "expected_chunks": [
+      70
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "question": "增量开发在管理上有哪些问题？",
+    "expected_chunks": [
+      71
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "question": "什么是软件原型？",
+    "expected_chunks": [
+      72
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "question": "原型如何帮助需求获取和验证？",
+    "expected_chunks": [
+      74
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "question": "原型开发有哪些收益？",
+    "expected_chunks": [
+      75
+    ],
+    "category": "软件过程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "question": "原型法可能带来什么问题？",
+    "expected_chunks": [
+      76
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "question": "螺旋模型的四个阶段是什么？",
+    "expected_chunks": [
+      78
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "question": "螺旋模型如何进行风险分析？",
+    "expected_chunks": [
+      78
+    ],
+    "category": "风险管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "question": "RUP 是什么，它支持哪些开发方式？",
+    "expected_chunks": [
+      80,
+      81
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 29
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "question": "RUP 的需求和分析设计工作流分别做什么？",
+    "expected_chunks": [
+      82
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "question": "RUP 如何安排测试、部署和变更管理？",
+    "expected_chunks": [
+      83
+    ],
+    "category": "软件过程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "敏捷开发的主要目标是什么？",
+    "expected_chunks": [
+      87,
+      88
+    ],
+    "category": "敏捷开发",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 38
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "question": "敏捷方法与计划驱动方法的主要区别是什么？",
+    "expected_chunks": [
+      90,
+      91
+    ],
+    "category": "敏捷开发",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 41
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "question": "敏捷宣言重视哪些价值观？",
+    "expected_chunks": [
+      93
+    ],
+    "category": "敏捷开发",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "question": "敏捷原则中的客户参与如何体现？",
+    "expected_chunks": [
+      94
+    ],
+    "category": "敏捷开发",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "question": "XP 为什么要求先写单元测试再编码？",
+    "expected_chunks": [
+      98,
+      101
+    ],
+    "category": "敏捷开发",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 49
+      },
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 52
+      }
+    ]
+  },
+  {
+    "question": "Scrum 的开发工作如何组织？",
+    "expected_chunks": [
+      103
+    ],
+    "category": "敏捷开发",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 2 SOFTWARE PROCESSES.pdf",
+        "page": 55
+      }
+    ]
+  },
+  {
+    "question": "什么是需求工程？",
+    "expected_chunks": [
+      113
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "question": "需求通常如何分层组织？",
+    "expected_chunks": [
+      111
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "question": "什么是用户需求和系统需求？",
+    "expected_chunks": [
+      110,
+      112
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 6
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "question": "功能需求与非功能需求有什么区别？",
+    "expected_chunks": [
+      117,
+      118
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 17
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "question": "非功能需求为什么可能影响整体架构？",
+    "expected_chunks": [
+      119
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "question": "非功能需求可以分为哪些类别？",
+    "expected_chunks": [
+      120
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "question": "什么是领域需求？",
+    "expected_chunks": [
+      122
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "question": "领域需求为什么容易产生可理解性问题？",
+    "expected_chunks": [
+      123
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "question": "需求工程的四项高层活动是什么？",
+    "expected_chunks": [
+      127
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "需求获取、分析、规格说明和验证分别关注什么？",
+    "expected_chunks": [
+      126,
+      127
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 27
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "可行性研究应该回答哪些问题？",
+    "expected_chunks": [
+      129
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "question": "需求发现和需求分类组织有什么区别？",
+    "expected_chunks": [
+      132
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "question": "需求验证要检查哪些问题？",
+    "expected_chunks": [
+      133
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "question": "需求评审和原型验证各有什么作用？",
+    "expected_chunks": [
+      134
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "question": "什么是需求管理？",
+    "expected_chunks": [
+      135
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "question": "SRS 文档有什么价值？",
+    "expected_chunks": [
+      138,
+      142
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 45
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "question": "高质量 SRS 应具备哪些特征？",
+    "expected_chunks": [
+      140
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "question": "SRS 应说明哪些类型的要求？",
+    "expected_chunks": [
+      145
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 52
+      }
+    ]
+  },
+  {
+    "question": "用例是什么？",
+    "expected_chunks": [
+      150
+    ],
+    "category": "需求工程",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "question": "用例如何描述系统与参与者的交互？",
+    "expected_chunks": [
+      150
+    ],
+    "category": "需求工程",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "question": "需求变更应如何评估和控制？",
+    "expected_chunks": [
+      152,
+      153,
+      155
+    ],
+    "category": "需求管理",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 59
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 60
+      },
+      {
+        "source": "CHAPTER 3 REQUIREMENT ENGINEERING-26-04.pdf",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "question": "软件设计的输入和输出分别是什么？",
+    "expected_chunks": [
+      163,
+      164
+    ],
+    "category": "软件设计",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 8
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "question": "FURPS 代表哪些质量因素？",
+    "expected_chunks": [
+      168
+    ],
+    "category": "质量属性",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "question": "什么是抽象？设计中为什么要使用抽象？",
+    "expected_chunks": [
+      169
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "question": "什么是设计模式？",
+    "expected_chunks": [
+      170
+    ],
+    "category": "软件设计",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "question": "模块化和功能独立之间有什么关系？",
+    "expected_chunks": [
+      170,
+      171
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 15
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "question": "什么是逐步求精？",
+    "expected_chunks": [
+      172
+    ],
+    "category": "软件设计",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "question": "数据设计、架构设计、接口设计和组件设计分别负责什么？",
+    "expected_chunks": [
+      175,
+      176,
+      177,
+      178
+    ],
+    "category": "软件设计",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 20
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 21
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 22
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "question": "部署级设计要解决什么问题？",
+    "expected_chunks": [
+      179
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "question": "什么是软件架构？",
+    "expected_chunks": [
+      183,
+      184
+    ],
+    "category": "软件设计",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 28
+      },
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "question": "架构设计为什么是需求与实现之间的关键连接？",
+    "expected_chunks": [
+      184
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "question": "架构中的逻辑视图、过程视图、开发视图和物理视图分别展示什么？",
+    "expected_chunks": [
+      188
+    ],
+    "category": "软件设计",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "question": "显式记录软件架构有哪些好处？",
+    "expected_chunks": [
+      190
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "question": "架构模型如何帮助利益相关者沟通？",
+    "expected_chunks": [
+      191
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "question": "什么是架构复用？",
+    "expected_chunks": [
+      193
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "question": "面向对象视图和传统组件视图有什么区别？",
+    "expected_chunks": [
+      195
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "question": "组件库如何支持基于组件的架构构建？",
+    "expected_chunks": [
+      196
+    ],
+    "category": "软件设计",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "question": "开放封闭原则和里氏替换原则分别是什么？",
+    "expected_chunks": [
+      197
+    ],
+    "category": "软件设计",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "question": "用户界面设计常见错误有哪些？",
+    "expected_chunks": [
+      204
+    ],
+    "category": "用户界面",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "question": "界面设计中如何让用户保持控制权？",
+    "expected_chunks": [
+      205
+    ],
+    "category": "用户界面",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 55
+      }
+    ]
+  },
+  {
+    "question": "如何降低用户的短期记忆负担？",
+    "expected_chunks": [
+      206
+    ],
+    "category": "用户界面",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 56
+      }
+    ]
+  },
+  {
+    "question": "为什么界面需要保持一致性？",
+    "expected_chunks": [
+      207
+    ],
+    "category": "用户界面",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "question": "用户模型、设计模型和心理模型有什么区别？",
+    "expected_chunks": [
+      208
+    ],
+    "category": "用户界面",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 4 Software Design-2026-04.pdf",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "question": "什么是软件测试？",
+    "expected_chunks": [
+      223
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "question": "软件测试的两个主要目标是什么？",
+    "expected_chunks": [
+      224,
+      226
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 7
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "question": "验证测试和缺陷测试有什么区别？",
+    "expected_chunks": [
+      225,
+      226
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 8
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "question": "Verification 和 Validation 分别回答什么问题？",
+    "expected_chunks": [
+      228
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "question": "测试所需的置信度由哪些因素决定？",
+    "expected_chunks": [
+      229
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "question": "软件检查和测试有什么互补关系？",
+    "expected_chunks": [
+      230,
+      232
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 13
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "question": "软件检查的优势是什么？",
+    "expected_chunks": [
+      233
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "question": "软件测试通常分为哪三个阶段？",
+    "expected_chunks": [
+      234
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "question": "单元测试、组件测试和系统测试分别测试什么？",
+    "expected_chunks": [
+      235
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "question": "为什么应该尽可能自动化单元测试？",
+    "expected_chunks": [
+      237
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "question": "一个自动化单元测试由哪三部分组成？",
+    "expected_chunks": [
+      238
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "question": "如何选择有效的单元测试用例？",
+    "expected_chunks": [
+      239
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "question": "接口测试应重点覆盖哪些情况？",
+    "expected_chunks": [
+      240,
+      241
+    ],
+    "category": "软件测试",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 23
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "question": "系统测试关注哪些组件交互问题？",
+    "expected_chunks": [
+      242
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "question": "组件测试和系统测试有什么区别？",
+    "expected_chunks": [
+      243
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "question": "如何用用例设计系统测试？",
+    "expected_chunks": [
+      244
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "question": "什么是测试驱动开发 TDD？",
+    "expected_chunks": [
+      247
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "question": "TDD 的基本活动顺序是什么？",
+    "expected_chunks": [
+      249
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "回归测试是为了解决什么问题？",
+    "expected_chunks": [
+      250,
+      251
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 33
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "question": "发布测试和用户测试有什么区别？",
+    "expected_chunks": [
+      252,
+      255
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 35
+      },
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "question": "Alpha 测试和 Beta 测试分别在哪里进行？",
+    "expected_chunks": [
+      256
+    ],
+    "category": "软件测试",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "question": "验收测试流程包括哪些步骤？",
+    "expected_chunks": [
+      258
+    ],
+    "category": "软件测试",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 5 Software Testing-2026-04.pdf",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "question": "软件项目管理的目标是什么？",
+    "expected_chunks": [
+      264
+    ],
+    "category": "项目管理",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "question": "软件项目管理中的 4P 是什么？",
+    "expected_chunks": [
+      265
+    ],
+    "category": "项目管理",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "question": "软件项目有哪些主要利益相关者？",
+    "expected_chunks": [
+      267
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "question": "选择软件团队结构时应考虑哪些因素？",
+    "expected_chunks": [
+      270
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "question": "敏捷团队通常具备哪些特征？",
+    "expected_chunks": [
+      273,
+      274
+    ],
+    "category": "团队管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 16
+      },
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "question": "什么是团队毒性，如何识别？",
+    "expected_chunks": [
+      275
+    ],
+    "category": "团队管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "question": "软件范围由哪些维度决定？",
+    "expected_chunks": [
+      277
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "question": "什么是问题分解？",
+    "expected_chunks": [
+      278
+    ],
+    "category": "项目管理",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "question": "选择过程模型时应考虑哪些项目条件？",
+    "expected_chunks": [
+      281,
+      284
+    ],
+    "category": "项目管理",
+    "difficulty": "困难",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 24
+      },
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "question": "哪些因素会影响软件项目最终结果？",
+    "expected_chunks": [
+      286
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "question": "项目陷入困境的典型迹象有哪些？",
+    "expected_chunks": [
+      287
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "question": "如何从项目的本质问题开始规划？",
+    "expected_chunks": [
+      288,
+      289
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 31
+      },
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "question": "软件项目经理需要哪些管理技能？",
+    "expected_chunks": [
+      290
+    ],
+    "category": "项目管理",
+    "difficulty": "简单",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "question": "如何定义软件项目成功标准？",
+    "expected_chunks": [
+      291
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "question": "什么是范围蔓延，为什么会危害项目？",
+    "expected_chunks": [
+      292
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "question": "软件项目管理中最重要的日常活动是什么？",
+    "expected_chunks": [
+      293
+    ],
+    "category": "项目管理",
+    "difficulty": "中等",
+    "expected_locations": [
+      {
+        "source": "CHAPTER 6 Software Management Hejab.pdf",
+        "page": 36
+      }
+    ]
+  }
+]
